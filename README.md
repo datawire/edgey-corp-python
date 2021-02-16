@@ -47,20 +47,18 @@ Next, access AMBASSADOR_SERVICE_IP in your browser, and note the title color and
 ![alt text](app-architecture-screenshot.jpg "EdgyCorp Web App Architecture")
 
 
-## Setup your local Node development environment
-Now you set up a local Node development environment with the DataProcessingService running locally and use Ambassador Telepresence to intercept traffic in your remote cluster and route it to your local service.
-
-If you don't already have Node installed on your local machine, instructions can be found on the [Node website Downloads page](https://nodejs.org/en/download/).
+## Setup your local Python development environment
+Now you set up a local Python development environment with the DataProcessingService running locally and use Ambassador Telepresence to intercept traffic in your remote cluster and route it to your local service.
 
 
 ```
 cd ../DataProcessingService
 
-npm install
+pip install flask requests
 
-# This application will run on port 3000 by default and the -c param specifies the color variable that the VeryLargeJavaService calls via the `/color` API endpoint.
+# This application will run on port 3000 by default and the --color param specifies the color variable that the VeryLargeJavaService calls via the `/color` API endpoint.
 
-node app -c blue
+python app.py --color blue
 ```
 
 ## Configuring Telepresence 
