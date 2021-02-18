@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: dataprocessingservice
-        image:  docker.io/arturogonzalezunosquare/data-processing-service-python
+        image:  docker.io/datawire/dataprocessingservice:python
         ports:
         - containerPort: 3000
 

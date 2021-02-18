@@ -39,7 +39,7 @@ log.setLevel(logging.INFO)
 @app.route('/')
 def root():
     log.info(request)
-    return 'root endpoint entry (DataProcessingNodeService)'
+    return 'root endpoint entry (DataProcessingService)'
 
 
 # Color
