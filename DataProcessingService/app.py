@@ -1,4 +1,5 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
+import json
 import requests
 import logging
 import argparse
@@ -81,7 +82,7 @@ def find_merchandise():
     try:
         search_response = requests.get(datastoreURL + '/findMerch', params=payload)
         log.info(search_response.text)
-        return search_response.text
+        return jsonify(json.loads(search_response.text))
     except requests.exceptions.RequestException as error:
         log.error(error)
 
